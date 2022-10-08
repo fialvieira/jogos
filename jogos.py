@@ -23,7 +23,7 @@ def escolher_jogo():
         else:
             break
 
-    if jogo == 1:
+    if int(jogo) == 1:
         print("Jogando forca...")
         forca.jogar()
     else:
