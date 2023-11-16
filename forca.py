@@ -5,9 +5,9 @@ def imprime_mensagem_abertura():
     print("***Olá, bem vindo ao jogo de forca!***")
     print("**************************************")
 
-def carrega_palavra_secreta():
+def carrega_palavra_secreta(nome_arquivo = "palavras.txt"):
     palavras = []
-    with open("palavras.txt") as arquivo:
+    with open(nome_arquivo) as arquivo:
         for linha in arquivo:
             palavras.append(linha.strip())
     return palavras[random.randrange(0, len(palavras))].upper()
